@@ -1,0 +1,253 @@
+/* TechnologySearch.css */
+.technology-search {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  padding-right: 50px;
+  border: 2px solid #e2e8f0;
+  border-radius: 25px;
+  font-size: 16px;
+  background: white;
+  color: #333;
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-spinner {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-spinner .spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #667eea;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.search-results-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.search-results-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  border-radius: 15px 15px 0 0;
+}
+
+.search-results-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.results-count {
+  background: #667eea;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.search-results-list {
+  padding: 10px 0;
+}
+
+.search-result-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-result-item:hover {
+  background: #f8fafc;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.result-content {
+  flex: 1;
+}
+
+.result-content h5 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.result-description {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.result-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.category-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.category-frontend {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.category-backend {
+  background: #f0f9ff;
+  color: #0c4a6e;
+}
+
+.category-database {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.category-devops {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.category-other {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.source-badge {
+  font-size: 11px;
+  color: #666;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.result-action {
+  padding-left: 15px;
+}
+
+.action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #667eea;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.search-result-item:hover .action-icon {
+  background: #5a6fd8;
+  transform: scale(1.1);
+}
+
+.no-results {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.no-results p {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-weight: 600;
+}
+
+.no-results small {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.recent-searches {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.recent-searches h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.search-hint {
+  color: #94a3b8;
+  margin: 0;
+  font-size: 14px;
+}
+
+.search-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+}
+
+.search-footer small {
+  color: #64748b;
+  font-size: 12px;
+}

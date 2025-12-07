@@ -1,0 +1,148 @@
+.technology-card {
+  border-radius: 12px;
+  padding: 25px;
+  background: white;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-left: 8px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+.technology-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Статусы */
+.status-notstarted {
+  border-left-color: #ff6b6b;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffeaea 100%);
+}
+
+.status-inprogress {
+  border-left-color: #4ecdc4;
+  background: linear-gradient(135deg, #f0fffe 0%, #e6fffc 100%);
+}
+
+.status-completed {
+  border-left-color: #45b7d1;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.4rem;
+  flex: 1;
+}
+
+.status-badge {
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.status-notstarted .status-badge { 
+  background: #ff6b6b; 
+  color: white; 
+}
+
+.status-inprogress .status-badge { 
+  background: #4ecdc4; 
+  color: white; 
+}
+
+.status-completed .status-badge { 
+  background: #45b7d1; 
+  color: white; 
+}
+
+.description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Секция заметок */
+.notes-section {
+  margin: 20px 0;
+}
+
+.notes-section h4 {
+  color: #2d3748;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.notes-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  transition: all 0.3s;
+  color: #2d3748;
+  background: #f8fafc;
+  min-height: 80px;
+}
+
+.notes-section textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.notes-hint {
+  font-size: 12px;
+  color: #718096;
+  margin-top: 8px;
+  text-align: right;
+  font-style: italic;
+}
+
+/* Футер карточки */
+.card-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.status-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}
+
+.tech-id {
+  font-family: 'Courier New', monospace;
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+}
